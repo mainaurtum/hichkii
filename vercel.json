@@ -1,19 +1,22 @@
 {
-  "version": 2,
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
+      "use": "@vercel/node",
       "config": {
-        "distDir": "dist",
-        "installCommand": "npm install --include=dev"
+        "installCommand": "npm install --include=dev",
+        "buildCommand": "npx vite build"
       }
     }
   ],
   "routes": [
     {
+      "src": "^/assets/(.*)$",
+      "dest": "/assets/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/index.html"
     }
   ]
 }
