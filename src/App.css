@@ -249,6 +249,33 @@
   font-size: 1.1rem;
 }
 
+.made-by-line {
+  margin: 15px 0;
+  padding: 5px 0;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.instagram-link:hover {
+  opacity: 0.8;
+}
+
+.instagram-icon {
+  vertical-align: middle;
+  display: inline-block;
+}
+
 /* Cart Styles */
 .toast-notification {
   position: fixed;
